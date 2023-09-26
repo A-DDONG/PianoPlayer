@@ -1,175 +1,43 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-container {
+  width: 50%;
+  margin-left: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-container {
+  width: 50%;
+  margin-left: 5rem;
 }
 
-.container {
-  /* overflow-x: scroll; */
-  overflow-y: hidden;
-  /* width: 660px; */
-  height: 110px;
-  white-space: nowrap;
-  margin: 10px;
-}
-
-.keyboard {
-  width: auto;
+ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.key {
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
   cursor: pointer;
-  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 20px;
-  height: 80px;
-  text-align: center;
-  box-shadow: 2px 2px darkgray;
-  display: inline-block;
-  position: relative;
-  margin-right: 3px;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  transition: all 0.3s ease;
 }
 
-.key div {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  pointer-events: none;
+li:hover {
+  transform: scale(1.1);
+  border: 2px solid #bb5252;
 }
 
-.key div sub {
-  font-size: 10px;
-  pointer-events: none;
+li.selected {
+  background-color: #bb5252;
 }
 
-.key:hover {
-  background-color: #eef;
-}
-
-.key:active,
-.active {
-  background-color: #000;
-  color: #fff;
-}
-
-.octave {
-  display: inline-block;
-  padding: 0 6px 0 0;
-}
-
-.settingsBar {
-  padding-top: 8px;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
-  position: relative;
-  vertical-align: middle;
-  width: 100%;
-  height: 30px;
-}
-
-.left {
-  width: 50%;
-  position: absolute;
-  left: 0;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.left span,
-.left input {
-  vertical-align: middle;
-}
-
-.right {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.right span {
-  vertical-align: middle;
-}
-
-.right input {
-  vertical-align: baseline;
-}
-/* ... 기존의 CSS 코드 ... */
-
-/* 흑건과 백건을 구분하기 위한 클래스 추가 */
-.white-key {
-  background-color: #fff;
-  height: 80px;
-  width: 25px;
-}
-
-.keyname {
-  bottom: -20px;
-}
-
-.black-key {
-  background-color: #000;
-  color: white;
-  height: 50px; /* 흑건은 백건보다 작고 높게 */
-  width: 20 px; /* 흑건은 백건보다 좁게 */
-  margin-left: -10px; /* 흑건을 백건 위에 위치시키기 */
-  margin-right: -10px; /* 흑건을 백건 위에 위치시키기 */
-  z-index: 1; /* 흑건을 백건 위에 렌더링 */
-}
-
-/* 키가 눌렸을 때의 스타일 */
-.white-key:active,
-.white-key.active {
-  background-color: #ddd;
-}
-
-.black-key:active,
-.black-key.active {
-  background-color: #444;
-}
-
-/* 피아노 느낌을 주기 위한 그림자 효과 */
-.key {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
 }
